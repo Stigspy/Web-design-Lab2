@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Virtual Photogapher</title>
+    <style type="text/css">
+        BODY {
+            background-color: #484848;
+            background-position: left, right;
+            background-position: center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <!-- Подключаем jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <Header>
+        <div class="row">
+            <div class="container-fluid" style="background-color: whitesmoke;">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">Virtual Photogapher</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="profile.html">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="gallery.html">Gallery</a>
+                                </li>
+                                
+                                <li  class="nav-item">
+                                    <button class="btn btn-outline-primary" id="logout">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    </Header>
+
+    <div class="container">
+        <div class="raw">
+            <div class="col-12 mt-5">
+                <form class="gallery-form">
+                <h2 class="my-0 mr-md-auto mt-5 font-weight-normal " style="color: black"> Your Gallery</h2>
+                <label for="files" class="label">
+                <input type="file" id="myfile" style="display:none"  webkitdirectory directory/>
+                <i class="fas fa-download fa-2x"></i>
+                <input type="button" value="..." id="filebtn" onclick="document.getElementById('myfile').click();" />
+               
+
+              </label>
+              <button  class="btn btn-lg btn-primary btn-block text-light"  type="submit" style="background-color: black">Delete All</button>
+              <p class="lead " style="color: black">or click on image delete</p>
+                <h2 class="my-0 mr-md-auto mb-md-0 font-weight-normal " style="color: darkgrey"> ___________________________________________________________________________________________</h2>
+            </div>
+        </div>
+    </div>
+    
+        <div class="row">
+            <div class="column">
+            </div>
+            <div class="column">
+            </div>
+            <div class="column">
+            </div>
+            
+        </div>
+    </form>
+        <script src="js/controllers/gallery.js"></script>
+        <script defer src="js/controllers/logout.js"></script>
+        <script async src="js/controllers/redirIfNotAuth.js"></script>
+       
+</body>
+</html>
